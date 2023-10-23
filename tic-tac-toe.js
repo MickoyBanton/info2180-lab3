@@ -9,6 +9,16 @@ window.addEventListener('load', function ()
     gameBoardDiv.forEach((square) =>
     {
         square.classList.add("square"); // Exercise 1
+
+        square.addEventListener("mouseover", () => 
+        {
+            square.classList.add("hover");
+        });
+        square.addEventListener("mouseout", () => 
+        {
+            square.classList.remove("hover")
+        });
+        
         square.addEventListener("click",function()
         {
             if(grid[tiles.indexOf(square)] =="None" )
